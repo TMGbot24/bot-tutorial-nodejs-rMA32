@@ -5,7 +5,7 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/cool guy/;  botRegexSalt = /^\/salt/; botRegexRules = /^\/rules/;
+botRegex = /^\/cool guy/; botRegexSalt = /^\/salt/; botRegexRules = /^\/rules/;
       botRegexAd=/^\/advance/; botRegexMI = /^\/Mike/; botDuck = /^\/duck/;  botFourth = /^\/4th/;
       botRegexTw = /^\/twitch/i; botRegexSh = /^\/oh/; botRegexCC = /^\/respek/; botRegexSr = /^\/trash/; botRegexSt = /^\/haha/; botRegexQu = /^\/stfu/;
       botRegexCryNeema=/^\/cry neema/; botRegexLuck = /^\/luck/; botRegexFumble = /^\/fumble/; botRegexL = /^\/L/;  botRegexCryingg = /^\/cryy/;botRegexBye = /^\/bye/; botRegexMad = /^\/umad/; botRegexTrades = /^\/no trades/; botRegexJoe = /^\/cry joe/; botRegexCheese = /^\/cheese/
@@ -29,7 +29,7 @@ function respond() {
     postMessage("https://i.groupme.com/540x401.png.0816b855551a43cdbe64525bc1c2bc6c");
     this.res.end();
   } 
-  else if(request.text && botRegexAd.test(request.text)) {
+    else if(request.text && botRegexAd.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://i.imgflip.com/xgtsl.jpg");
     this.res.end();
@@ -39,24 +39,24 @@ function respond() {
     postMessage("https://i.groupme.com/540x906.jpeg.5d1de5afddce4fac880e0abe459547ca");
     this.res.end();
   }
-  else if(request.text && botRegexRules.test(request.text)) {
+    else if(request.text && botRegexRules.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://docs.google.com/document/d/1YQTYkbC8SUn7ecj915PNpUiNYmagKNp-zsImKW8u0NI/edit?usp=sharing");
     this.res.end();
   } 
-  else if(request.text && botRegexMI.test(request.text)) {
+    else if(request.text && botRegexMI.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://i.kinja-img.com/gawker-media/image/upload/mjvi0ol0s5i3c6ikolql.jpg");
     this.res.end();
   } 
 
-  else if(request.text && botRegexTw.test(request.text)) {
+    else if(request.text && botRegexTw.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://www.twitch.tv/"+request.text.substring(8,request.text.length));
     this.res.end();
   } 
 
-  else if(request.text && botRegexSh.test(request.text)) {
+   else if(request.text && botRegexSh.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://www.quickmeme.com/img/fe/fe9126fe4327f1b37f06c8c00c051bf8f37c1580b6c3d16da8b4dcb8607b60b2.jpg");
     this.res.end();
