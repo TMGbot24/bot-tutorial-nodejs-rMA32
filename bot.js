@@ -5,10 +5,10 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-botRegex = /^\/cool guy/; botRegexSalt = /^\/salt/; botRegexRules = /^\/rules/;
-      botRegexAd=/^\/advance/; botRegexMI = /^\/Mike/; botDuck = /^\/duck/;  botFourth = /^\/4th/;
-      botRegexTw = /^\/twitch/i; botRegexSh = /^\/oh/; botRegexCC = /^\/respek/; botRegexSr = /^\/trash/; botRegexSt = /^\/haha/; botRegexQu = /^\/stfu/;
-      botRegexCryNeema=/^\/cry neema/; botRegexLuck = /^\/luck/; botRegexFumble = /^\/fumble/; botRegexL = /^\/L/;  botRegexCryingg = /^\/cryy/;botRegexBye = /^\/bye/; botRegexMad = /^\/umad/; botRegexTrades = /^\/no trades/; botRegexJoe = /^\/cry joe/; botRegexCheese = /^\/cheese/
+      botRegex = /^\/cool guy/; botRegexSalt = /^\/salt/;botRegexJoe = /^\/cry joe/;
+      botRegexAd=/^\/advance/;botRegexMI = /^\/Mike/; botRegexBye = /^\/bye/; botDuck = /^\/duck/;
+      botRegexTw = /^\/twitch/i; botRegexTrade = /^\/trades/; botRegexSh = /^\/oh/; botRegexCC = /^\/respek/; botRegexSr = /^\/trash/; botRegexSt = /^\/haha/; botRegexQu = /^\/stfu/;
+      botRegexCryNeema=/^\/cry neema/; botRegexLuck = /^\/luck/; botRegexFumble = /^\/fumble/; botRegexL = /^\/L/;  botRegexCryingg = /^\/cry/;  botRegexRuless = /^\/rules/; botRegexFour = /^\/4th/; botRegexBleach = /^\/bleach/; botRegexCheese = /^\/cheese/
       cheese1 = 'https://pbs.twimg.com/profile_images/494330891/cheese_oh_cheese_400x400.jpg'; cheese2 = 'https://i.ytimg.com/vi/efLRmlILC2I/maxresdefault.jpg'
       cheese3 = 'http://www.packerpalace.com/palace02/maddenwcheese.gif';
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
@@ -24,41 +24,39 @@ botRegex = /^\/cool guy/; botRegexSalt = /^\/salt/; botRegexRules = /^\/rules/;
     postMessage("https://i.groupme.com/600x600.jpeg.abf553e8c766444ca32cd06ffb450d8c");
     this.res.end();
   } 
-    else if(request.text && botRegexBleach.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("https://i.groupme.com/540x401.png.0816b855551a43cdbe64525bc1c2bc6c");
-    this.res.end();
-  } 
-    else if(request.text && botRegexAd.test(request.text)) {
+  else if(request.text && botRegexAd.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://i.imgflip.com/xgtsl.jpg");
     this.res.end();
   }
-    else if(request.text && botRegexFourth.test(request.text)) {
+  else if(request.text && botRegexJoe.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://i.groupme.com/540x906.jpeg.5d1de5afddce4fac880e0abe459547ca");
-    this.res.end();
-  }
-    else if(request.text && botRegexRules.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("https://docs.google.com/document/d/1YQTYkbC8SUn7ecj915PNpUiNYmagKNp-zsImKW8u0NI/edit?usp=sharing");
+    postMessage("https://i.groupme.com/1620x2160.jpeg.f8db8bc8222e404d9813750ca22a1d0f");
     this.res.end();
   } 
-    else if(request.text && botRegexMI.test(request.text)) {
+  else if(request.text && botRegexMI.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://i.kinja-img.com/gawker-media/image/upload/mjvi0ol0s5i3c6ikolql.jpg");
     this.res.end();
   } 
-
-    else if(request.text && botRegexTw.test(request.text)) {
+  else if(request.text && botRegexTw.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://www.twitch.tv/"+request.text.substring(8,request.text.length));
     this.res.end();
   } 
-
-   else if(request.text && botRegexSh.test(request.text)) {
+  else if(request.text && botRegexTrade.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://docs.google.com/document/d/13-rlkR9j5dUhR8qekpITrsM4GFyDpUy8tdfJh3asRIA/mobilebasic");
+    this.res.end();
+  } 
+  else if(request.text && botRegexSh.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://www.quickmeme.com/img/fe/fe9126fe4327f1b37f06c8c00c051bf8f37c1580b6c3d16da8b4dcb8607b60b2.jpg");
+    this.res.end();
+  } 
+   else if(request.text && botRegexBye.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://i.groupme.com/648x708.jpeg.3f368f610c6c412e9ced402ab4cc90ea");
     this.res.end();
   } 
   else if(request.text && botDuck.test(request.text)) {
@@ -106,31 +104,26 @@ this.res.writeHead(200);
 postMessage("https://pbs.twimg.com/media/CLNho0mUcAAZ5KC.jpg");
 this.res.end();
 }
+  else if(request.text && botRegexRuless.test(request.text)) {
+this.res.writeHead(200);
+postMessage("https://docs.google.com/document/d/1YQTYkbC8SUn7ecj915PNpUiNYmagKNp-zsImKW8u0NI/edit?usp=sharing");
+this.res.end();
+}
+  else if(request.text && botRegexFour.test(request.text)) {
+this.res.writeHead(200);
+postMessage("https://i.groupme.com/540x906.jpeg.5d1de5afddce4fac880e0abe459547ca");
+this.res.end();
+}
+  else if(request.text && botRegexBleach.test(request.text)) {
+this.res.writeHead(200);
+postMessage("https://i.groupme.com/540x401.png.0816b855551a43cdbe64525bc1c2bc6c");
+this.res.end();
+}
   else if(request.text && botRegexCryingg.test(request.text)) {
 this.res.writeHead(200);
 postMessage("http://cdn3.sbnation.com/imported_assets/1945573/MORENO-TEARS.gif");
 this.res.end();
 }
-  else if(request.text && botRegexBye.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("https://i.groupme.com/648x708.jpeg.3f368f610c6c412e9ced402ab4cc90ea");
-    this.res.end();
-  } 
-    else if(request.text && botRegexMad.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("https://i.groupme.com/600x457.jpeg.47b7d760f00a400280e4d83a07719149");
-    this.res.end();
-  } 
-      else if(request.text && botRegexTrades.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("https://docs.google.com/document/d/13-rlkR9j5dUhR8qekpITrsM4GFyDpUy8tdfJh3asRIA/mobilebasic");
-    this.res.end();
-  } 
-      else if(request.text && botRegexJoe.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("https://i.groupme.com/1620x2160.jpeg.f8db8bc8222e404d9813750ca22a1d0f");
-    this.res.end();
-  } 
   else if(request.text && botRegexCheese.test(request.text)) {
     this.res.writeHead(200);
     if(0.6 >= Math.random() > 0.3)
