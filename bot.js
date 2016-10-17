@@ -8,7 +8,7 @@ function respond() {
       botRegex = /^\/cool guy/; botRegexSalt = /^\/salt/;botRegexJoe = /^\/cry joe/;
       botRegexAd=/^\/advance/;botRegexMI = /^\/mike/; botRegexBye = /^\/bye/; botDuck = /^\/duck/;
       botRegexTw = /^\/twitch/i; botRegexTrade = /^\/trades/; botRegexSh = /^\/oh/; botRegexCC = /^\/respek/; botRegexSr = /^\/trash/; botRegexSt = /^\/haha/; botRegexQu = /^\/stfu/;
-      botRegexCryNeema=/^\/cry neema/; botRegexLuck = /^\/luck/; botRegexFumble = /^\/fumble/; botRegexL = /^\/L/;  botRegexCryingg = /^\/cry/;  botRegexRuless = /^\/rules/; botRegexFour = /^\/4th/; botRegexBleach = /^\/bleach/;  botRegexCommands = /^\/commands/; botRegexCheese = /^\/cheese/
+      botRegexCryNeema=/^\/cry neema/; botRegexLuck = /^\/luck/; botRegexFumble = /^\/fumble/; botRegexL = /^\/L/;  botRegexCryingg = /^\/cry/;  botRegexRuless = /^\/rules/; botRegexFour = /^\/4th/; botRegexBleach = /^\/bleach/;  botRegexCommands = /^\/commands/; botRegexEat = /^\/eat/; botRegexCheese = /^\/cheese/
       cheese1 = 'https://pbs.twimg.com/profile_images/494330891/cheese_oh_cheese_400x400.jpg'; cheese2 = 'https://i.ytimg.com/vi/efLRmlILC2I/maxresdefault.jpg'
       cheese3 = 'http://www.packerpalace.com/palace02/maddenwcheese.gif';
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
@@ -121,12 +121,17 @@ this.res.end();
 }
   else if(request.text && botRegexCommands.test(request.text)) {
 this.res.writeHead(200);
-postMessage("https://i.groupme.com/1026x1671.png.471795884d9d4bba8c0a3882c5069016");
+postMessage("https://i.groupme.com/826x1720.png.0292eefb0394403aaf2aab6d338955b8");
 this.res.end();
 }
   else if(request.text && botRegexCryingg.test(request.text)) {
 this.res.writeHead(200);
 postMessage("http://cdn3.sbnation.com/imported_assets/1945573/MORENO-TEARS.gif");
+this.res.end();
+}
+  else if(request.text && botRegexEat.test(request.text)) {
+this.res.writeHead(200);
+postMessage("http://im.ezgif.com/tmp/ezgif-3448794012.gif");
 this.res.end();
 }
   else if(request.text && botRegexCheese.test(request.text)) {
