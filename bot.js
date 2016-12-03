@@ -218,7 +218,7 @@ this.res.end();
 this.res.writeHead(200);
 postMessage("https://i.groupme.com/486x893.png.ff200e85793d48958cfd2166cde9cabb");
 this.res.end();
-          
+}          
   else if(request.text && botRegexCheese.test(request.text)) {
     this.res.writeHead(200);
     if(0.6 >= Math.random() > 0.3)
