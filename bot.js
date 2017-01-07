@@ -6,7 +6,7 @@ var botID = process.env.BOT_ID;
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/cool guy/; botRegexSalt = /^\/salt/;botRegexJoe = /^\/cry joe/;
-      botRegexAd=/^\/advance/;botRegexMI = /^\/mike/; botRegexBye = /^\/bye/; botDuck = /^\/duck/;
+      botRegexAd=/^\/advance/;botRegexMI = /^\/offseason/; botRegexBye = /^\/bye/; botDuck = /^\/duck/;
       botRegexTw = /^\/twitch/i; botRegexTrade = /^\/trades/; botRegexSh = /^\/oh/; botRegexCC = /^\/respek/; botRegexSr = /^\/trash/; botRegexSt = /^\/haha/; botRegexQu = /^\/stfu/;
       botRegexCryNeema=/^\/cry neema/; botRegexLuck = /^\/luck/; botRegexFumble = /^\/fumble/; botRegexL = /^\/L/;  botRegexCryingg = /^\/cry/;  botRegexRuless = /^\/rules/; botRegexFour = /^\/4th/; botRegexBleach = /^\/bleach/;  botRegexCommands = /^\/commands/; botRegexEat = /^\/eat/; botRegexWeek1 = /^\/week1 /; botRegexWeek2 = /^\/week 2/;botRegexWeek3 = /^\/week 3/; botRegexWeek4 = /^\/week 4/; botRegexWeek5 = /^\/week 5/; botRegexWeek6 = /^\/week 6/; botRegexWeek7 = /^\/week 7/; botRegexWeek8 = /^\/week 8/; botRegexWeek9 = /^\/week 9/; botRegexWeek10 = /^\/week 10/; botRegexWeek11 = /^\/week 11/;botRegexWeek12 = /^\/week 12/; botRegexWeek13 = /^\/week 13/; botRegexWeek14 = /^\/week 14/; botRegexWeek15 = /^\/week 15/; botRegexWeek16 = /^\/week 16/; botRegexWeek17 = /^\/week 17/; botRegexCheese = /^\/cheese/
       cheese1 = 'https://pbs.twimg.com/profile_images/494330891/cheese_oh_cheese_400x400.jpg'; cheese2 = 'https://i.ytimg.com/vi/efLRmlILC2I/maxresdefault.jpg'
@@ -36,7 +36,7 @@ function respond() {
   } 
   else if(request.text && botRegexMI.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://i.kinja-img.com/gawker-media/image/upload/mjvi0ol0s5i3c6ikolql.jpg");
+    postMessage("https://i.groupme.com/960x791.png.99204bd73720488aa68271a777c4b760");
     this.res.end();
   } 
   else if(request.text && botRegexTw.test(request.text)) {
